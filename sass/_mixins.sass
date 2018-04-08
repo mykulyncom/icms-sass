@@ -1,0 +1,85 @@
+/*
+ *   Author:  Sergey Selin
+ *   Website: http://selin.site
+ *   Github:  https://github.com/selinsite
+ */
+=cover
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+
+=ease
+	transition: all .3s ease
+	
+//simple gradient
+=g($color1, $color2)
+	+background-image(linear-gradient($color1, $color2))
+
+=gh($color1, $color2)
+	+background-image(linear-gradient(left, $color1, $color2))
+
+//Placeholder color
+=placeholder-color($color)
+	&:-moz-placeholder,
+	&::-moz-placeholder
+		color: $color
+		opacity: 1
+	&::-webkit-input-placeholder
+		color: $color
+
+//Placeholder style
+=placeholder
+	&:-ms-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&::-webkit-input-placeholder
+		@content
+	&::placeholder
+		@content
+
+//Adding font
+=font($alias, $name)
+	@font-face
+		font-family: $alias
+		src: url("../fonts/" + $name + ".eot")
+		src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff2") format('woff2'), url("../fonts/" + $name + ".woff?ver1.0") format("woff"), url("../fonts/" + $name + ".ttf") format("truetype"), url("../fonts/" + $name + ".svg#" + $name + "") format("svg")
+		@content
+
+//Hide the text and show 3 dots
+=text-overflow
+	overflow: hidden
+	-ms-text-overflow: ellipsis
+	text-overflow: ellipsis
+	white-space: nowrap
+
+//HEX to RGBA
+=hextorgba($color, $opacity)
+	background: rgba($color, $opacity)
+
+=phone
+	@media screen and (max-width: 320px - 1px)
+		@content
+=phone-wide
+	@media screen and (max-width: 480px - 1px)
+		@content
+=tablet-small
+	@media screen and (max-width: 640px - 1px)
+		@content
+=tablet
+	@media screen and (max-width: 768px - 1px)
+		@content
+=tablet-wide
+	@media screen and (max-width: 992px - 1px)
+		@content
+=laptop
+	@media screen and (max-width: 1024px - 1px)
+		@content
+=desktop
+	@media screen and (max-width: 1200px - 1px)
+		@content
+=desktop-wide
+	@media screen and (max-width: 1440px - 1px)
+		@content

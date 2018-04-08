@@ -1,0 +1,27 @@
+{
+  "name": "icmssass",
+  "version": "0.1.0",
+  "description": "Startup sass-gulp template for InstantCMS",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "author": "Sergey Selin",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "imagemin-pngquant": "^5.1.0",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1"
+  }
+}

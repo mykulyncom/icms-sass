@@ -1,0 +1,9 @@
+/node_modules/*
+/assets/*
+/content/*
+/controllers/*
+/css/*
+/images/*
+/js/*
+/profiles/*
+/widgets/*
