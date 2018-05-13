@@ -7,3 +7,5 @@
 /js/*
 /profiles/*
 /widgets/*
+/package-lock.json
+/.git/
